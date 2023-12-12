@@ -11,7 +11,7 @@
 main{
     
 }
-/* Scroll Animation */
+/* ------------------------------Scroll Animation */
 
 @keyframes fade {
     from {
@@ -23,10 +23,25 @@ main{
 
     }
 }
-.firstDivFirstBox, .secondtDivFirstBox{
+.firstDivFirstBox, .secondtDivFirstBox, .firstDivSecondBox, .secondtDivSecondBox{
     animation: fade linear both;
     animation-timeline: view();
-    animation-range: entry 60% cover 60%;
+    animation-range: entry 20% cover 40%;
+}
+.centerDivFirstBox, .centerDivSecondBox{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+.secondtDivFirstBox{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 70% cover 40%;
+}
+.secondtDivSecondBox{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 60%;
 }
 
 .blackBox{
@@ -36,15 +51,11 @@ main{
     background-repeat: no-repeat;
     
 }
+
 @keyframes reveal{
     
     0% {
-        opacity: ;
-        transform: translateY(30%)
-    }
-    50%{
-        opacity: ;
-        ;
+        transform: translateY(15%)
     }
     100%{
         transform: translateY(0%);
@@ -183,7 +194,7 @@ main{
     justify-content: center;
 } */
 
-/* Section 1 */
+/*----------------------------------------------- Section 1 */
 .mainSection{
     display: flex;
     flex-direction: column;
@@ -192,7 +203,7 @@ main{
     
 }
 .blackBox{
-    background-color: rgba(0, 0, 0, 0.959);
+    background-color: rgba(0, 0, 0, 0.83);
     height: 40%;
     width: 80%;
     margin-bottom: 5%;
@@ -201,9 +212,10 @@ main{
     -moz-box-shadow: 0px 10px 20px 7px rgba(0,0,0,0.83);
     padding-left: 3%;
     padding-right: 3%;
-    
 }
-/* First Box */
+
+/* ------------------------------First Box */
+
 .firstBoxContent{
     display: flex;
     flex-direction: row;
@@ -212,55 +224,136 @@ main{
 }
 .firstDivFirstBox{
     color: white;   
-    width: 50%;
+    width: 33%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    
 }
 .descriptionOne{
-    text-align: left;
+   width: 75%;
+   text-align: center;
 }
 .firstDivFirstBox p{
     line-height: 2em;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
 }
 .firstDivFirstBox img{
-    width: 50%;
+    width: 80%;
     margin-bottom: 4%;
 }
-h2, h3, h4{
-    font-size: 25px;
+h2, h3, h4, h5{
+    font-size: 24px;
 }
+
+
 .secondtDivFirstBox{
     color: white;
     line-height: 1.8em;
     font-size: 22px;
-    width: 50%;
+    width: 33%;
     font-weight: 700;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    padding-top: 3%;
+    padding-top: 2%;
     padding-bottom: 2%;
 }
 .secondtDivFirstBox P{
     font-size: 24px;
 }
 .secondtDivFirstBox img{
-    width: 55%;
+    width: 100%;
     margin-top: 4%;
 }
 .descriptionTwo{
-    text-align: right;
+    text-align: center;
+}
+.centerDivFirstBox{
+   width: 33%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.centerDivFirstBox img{
+    width: 17vw;
+}
+
+/* -----------------------------Second Box                  -> Réunir les class first et second box qui peuvent l'être*/              
+
+.secondBoxContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* flex-wrap: wrap; */
+}
+.firstDivSecondBox{
+    color: white;   
+    width: 33%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    
+}
+.descriptionOneSecondBox{
+   width: 75%;
+   text-align: center;
+   margin-top: 1vw;
+}
+.firstDivSecondBox p{
+    line-height: 2em;
+    font-size: 24px;
+    font-weight: 700;
+}
+.firstDivSecondBox img{
+    width: 80%;
+    margin-bottom: 4%;
 }
 
 
-/* Footer */
+.secondtDivSecondBox{
+    color: white;
+    line-height: 1.8em;
+    font-size: 22px;
+    width: 33%;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.secondtDivSecondBox P{
+    font-size: 24px;
+}
+.secondtDivSecondBox img{
+    width: 90%;
+    margin-top: 4%;
+}
+.descriptionTwoSecondBox{
+    text-align: center;
+}
+.centerDivSecondBox{
+   width: 33%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.centerDivSecondBox img{
+    width: 17vw;
+}
+
+/* ------------------------------Footer */
 
 .globalFooter{
     display: flex;
