@@ -10,21 +10,40 @@
 <body > 
  <!-------------------Header--------------------->
     <header>
-        <div class="menuDesktopLeft">
-            <a href="#ancreLogo"><h1><img class="textLogoFluo" src="/Images/LOGO_TXT-White-crop.png" alt="fluorgnik crew"></h1></a>
-            <div class="logoSocialBox">
-                <a class="logoRS" target="_blank" href="https://www.facebook.com/FluOrganik"><img  src="/Images/Icones_RS/icons8-facebook-50.png" alt="Facebook icon"></a>
-                <a class="logoRS" target="_blank" href="https://www.instagram.com/fluorganiklightshow/"><img  src="/Images/Icones_RS/icons8-instagram-50.png" alt="Instagramicon"></a>
-                <a class="logoRS" target="_blank"  href="https://www.youtube.com/@fluorganiklightshow9666"><img class="logoYT" src="/Images/Icones_RS/icons8-youtube-fat.png" alt="Youtube icon"></a>
+        <div class="desktopHeader">
+            <div class="menuDesktopLeft">
+                <a href="#ancreLogo"><h1><img class="textLogoFluo" src="/Images/LOGO_TXT-White-crop.png" alt="fluorgnik crew"></h1></a>
+                <div class="logoSocialBox">
+                    <a class="logoRS" target="_blank" href="https://www.facebook.com/FluOrganik"><img  src="/Images/Icones_RS/icons8-facebook-50.png" alt="Facebook icon"></a>
+                    <a class="logoRS" target="_blank" href="https://www.instagram.com/fluorganiklightshow/"><img  src="/Images/Icones_RS/icons8-instagram-50.png" alt="Instagramicon"></a>
+                    <a class="logoRS" target="_blank"  href="https://www.youtube.com/@fluorganiklightshow9666"><img class="logoYT" src="/Images/Icones_RS/icons8-youtube-fat.png" alt="Youtube icon"></a>
+                </div>
+            </div>
+            <nav class="menuDesktopNav">
+                <ul class="menuList">
+                    <a href=""><li>ABOUT US</li></a>
+                    <a href=""><li>SERVICES</li></a>
+                    <a href=""><li>GALLERY</li></a>
+                </ul>
+            </nav>
+        </div>    
+        <div class="menuBuger">
+            <input id="toggle" type="checkbox"></input>
+            <label for="toggle" class="hamburger">
+                <div class="top-bun"></div>
+                 <div class="meat"></div>
+                 <div class="bottom-bun"></div>
+            </label> 
+            <div class="navBurger">
+              <div class="nav-wrapper">
+                <nav>
+                  <a href="#">ABOUT US</a><br>
+                  <a href="#">SERVICES</a><br>
+                  <a href="#">GALLERY</a><br>
+                </nav>
+              </div>
             </div>
         </div>
-        <nav class="menuDesktopNav">
-            <ul class="menuList">
-                <a href=""><li>ABOUT US</li></a>
-                <a href=""><li>SERVICES</li></a>
-                <a href=""><li>GALLERY</li></a>
-            </ul>
-        </nav>
     </header>
  <!-----------------Main------------------->
     <main>
@@ -38,7 +57,7 @@
             <div class="blackBox" >   <!-- First BlackBox -->
                 <div class="firstBoxContent">
                     <div class="firstDivFirstBox">
-                        <img src="/Images/tropikermesse1-red.jpg" alt="tropikermesse_2022">
+                        <img class="imagesBox" src="/Images/tropikermesse1-red.jpg" alt="tropikermesse_2022">
                         <div class="descriptionOne">
                             <p>Association law 1901</p>
                             <h2>Visual Arts</h2>
@@ -47,7 +66,7 @@
                         </div>
                     </div>
                     <div class="centerDivFirstBox">
-                        <img src="/Images/soundsystem-red.jpg" alt="sound system">
+                        <img class="imagesBox" src="/Images/soundsystem-red.jpg" alt="sound system">
                     </div>
                     <div class="secondtDivFirstBox">
                         <div class="descriptionTwo">
@@ -56,14 +75,14 @@
                             <h4>Chill-out</h4>
                             <p>Installations</p>
                         </div>
-                        <img src="/Images/liquidlightshow-bw.jpg" alt="liquid_Light_Show">
+                        <img class="imagesBox" src="/Images/liquidlightshow-bw.jpg" alt="liquid_Light_Show">
                     </div>
                 </div>
             </div>
             <div class="blackBox" >  <!-- Second BlackBox -->
                 <div class="secondBoxContent">
                     <div class="firstDivSecondBox">
-                        <img src="/Images/theater-chill-red.jpg" alt="tropikermesse_2022">
+                        <img class="imagesBox" src="/Images/theater-chill-red.jpg" alt="tropikermesse_2022">
                         <div class="descriptionOneSecondBox">
                             <p>Stage Design</p>
                             <p>Sound System</p>
@@ -71,7 +90,7 @@
                         </div>
                     </div>
                     <div class="centerDivSecondBox">
-                        <img src="/Images/cyberpunk-bw.jpg" alt="sound system">
+                        <img class="imagesBox" src="/Images/cyberpunk-bw.jpg" alt="sound system">
                     </div>
                     <div class="secondtDivSecondBox">
                         <div class="descriptionTwoSecondBox">
@@ -79,7 +98,7 @@
                             <p>Vjing / Mapping</p>
                             <h5>Liquid Light Show</h5>
                         </div>
-                        <img src="/Images/setup-bw.jpg" alt="liquid_Light_Show">
+                        <img class="imagesBox" src="/Images/setup-bw.jpg" alt="liquid_Light_Show">
                     </div>
                 </div>
             </div>
@@ -122,10 +141,9 @@
                 <a href="#ancreLogo"><img class="logoFluoFooter" src="/Images/LOGO_FLUORGANIK-BLANC.png" alt="logo_disney"></a>
                 <p>© 2023 FluOrganik Crew -<i class="far fa-copyright"> All rights reserved.</i> </p>
             </div>
-            <div class="sideFooter" class="rightFooter">
+            <div class="sideFooter" id="rightFooter">
                 <p class="textRightFooter">Support the FluOrganik Crew :</p>
-                <a href="https://www.helloasso.com/associations/fluorganik-crew"  target="_blank"> https://www.helloasso.com/associations/fluorganik-crew</a>
-                <p></p>
+                <a href="https://www.helloasso.com/associations/fluorganik-crew" target="_blank">https://www.helloasso.com/<wbr>associations/fluorganik-crew</a>
             </div>
             
             <!-- <a class="contactButton" href="">Contact us</a> -->
