@@ -1,7 +1,7 @@
 
 /* Generic Stettings */
 @font-face { font-family: 'ZenDots-Regular'; 
-    src: url(/font/Zen_Dots/ZenDots-Regular.ttf) 
+    src: url(/Font/Zen_Dots/ZenDots-Regular.ttf) 
 } 
 *{
     margin : 0;
@@ -94,8 +94,8 @@ header{
     justify-content: flex-start;
 }
 .menuDesktopNav{
-    width: 400px;
-    margin-right: 5%;
+    width: 450px;
+    margin-right: 3%;
 }
 .menuList{
     display: flex;
