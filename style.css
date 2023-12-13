@@ -1,16 +1,20 @@
 
 /* Generic Stettings */
-
+@font-face { font-family: 'ZenDots-Regular'; 
+    src: url(/font/Zen_Dots/ZenDots-Regular.ttf) 
+} 
 *{
     margin : 0;
     padding : 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Oswald','Open Sans', sans-serif;
+    font-family: pop;
+    font-family: 'ZenDots-Regular';
+    font-weight: 300;
 }
 .imagesBox{
-    border: #f8982b75;
-    border-style: solid;
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }
 /* ------------------------------Scroll Animation */
 
@@ -71,7 +75,7 @@
 
 /*----------------------------------- Header */
 header{
-    
+
 }
 .desktopHeader{
     position: fixed;
@@ -111,10 +115,7 @@ h1{
     display: flex;
     align-items: center;
 }
-.logoRS:hover{
-    cursor: pointer;
-}
-    
+
 .logoRS{
     margin-left: 15%;
 }
@@ -123,6 +124,7 @@ h1{
     -webkit-transform: scale(1.5);
     transform: scale(1.35);
     transition: 1s;
+    cursor: pointer;
 }
 .logoYT{
     scale:1.1;
@@ -273,7 +275,8 @@ li{
 /* -----------------------------------------Main */
 /* --------------------Image Parallax */
 
-main{
+
+body{
     background-image: url(/Images/vecteezy_circle-turing-pattern-vector-background_10009713_947/circle_turing_gray2.jpg);
     background-position: center;
     background-attachment: fixed;
@@ -319,17 +322,15 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: ;
     
 }
 .blackBox{
-    background-color: rgba(0, 0, 0, 0.83);
+    background-color: rgba(0, 0, 0, 0.932);
     width: 80%;
     margin-bottom: 4vw;
     box-shadow: 0px 10px 20px 7px rgba(0,0,0,0.83);
     -webkit-box-shadow: 0px 10px 20px 7px rgba(0,0,0,0.83);
     -moz-box-shadow: 0px 10px 20px 7px rgba(0,0,0,0.83);
-  
 }
 
 /* ------------------------------First Box */
@@ -354,7 +355,6 @@ main{
     align-items: center;
     padding-top: 5%;
     padding-bottom: 2vw;
-    
 }
 .descriptionOne{
    width: 75%;
@@ -370,7 +370,8 @@ main{
     margin-bottom: 4%;
 }
 h2, h3, h4, h5{
-    font-size: 24px;
+    font-size: 26px;
+    font-weight: 600;
 }
 
 
@@ -399,13 +400,16 @@ h2, h3, h4, h5{
 .descriptionTwo{
     text-align: center;
 }
+.descriptionTwo p{
+    font-weight: 700;
+}
 .centerDivFirstBox{
     width: 17vw;
     min-width: 250px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
 }
 .centerDivFirstBox img{
     width: 17vw;
@@ -419,17 +423,21 @@ h2, h3, h4, h5{
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    /* flex-wrap: wrap; */
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-around;
 }
 .firstDivSecondBox{
     color: white;   
-    width: 33%;
+    width: 25vw;
+    min-width: 450px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 5%;
+    padding-bottom: 2vw;
     
 }
 .descriptionOneSecondBox{
@@ -452,7 +460,8 @@ h2, h3, h4, h5{
     color: white;
     line-height: 1.8em;
     font-size: 22px;
-    width: 33%;
+    width: 25vw;
+    min-width: 450px;
     font-weight: 700;
     display: flex;
     justify-content: space-around;
@@ -471,6 +480,9 @@ h2, h3, h4, h5{
 .descriptionTwoSecondBox{
     text-align: center;
 }
+.descriptionTwoSecondBox p{
+    font-weight: 700;
+}
 .centerDivSecondBox{
    width: 33%;
    display: flex;
@@ -479,6 +491,7 @@ h2, h3, h4, h5{
 }
 .centerDivSecondBox img{
     width: 17vw;
+    min-width: 250px;
 }
 
 /* ------------------------------Footer */
@@ -572,12 +585,12 @@ h2, h3, h4, h5{
     .menuDesktopNav{
         display: none;
     }
+
+    main{
+        margin-bottom: 20vw;
+    }
     /* Footer */
 
-    .centerFooter{
-        scale: 1;
-        transition: 1s;
-    }
     .bottomFooter{
         display: flex;
         flex-wrap:wrap;
@@ -587,20 +600,32 @@ h2, h3, h4, h5{
         margin-top: 1.2em;
     }
     /* parallax  zoom */
+
     .logoFluo{
         margin-right:0;
-        top:7%;
-       scale: 0.8;
+        top:35%;
+        left:-1%;
+        scale: 1.5 ;
     }
     .logoFluo:hover{ 
-        -ms-transform: scale(1.7);
-        -webkit-transform: scale(1.7);
-        transform: scale(1.7);
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
         filter: drop-shadow(16px 16px 20px rgb(197, 151, 90)) blur(40px);
         transition: 7s;
     }
+    /* ------- Black Box */
+
     .firstDivFirstBox{
-        padding-top: 10%;
+        margin-top: 8vw;
+        padding-bottom: 0;
+    }
+    .secondtDivFirstBox{
+        margin-bottom: 7vw;
+    }
+    .descriptionTwo{
+        margin-bottom: 2vw;
+        margin-top: 1vw;
     }
     .centerDivFirstBox{
         margin-top: 5vw;
@@ -609,17 +634,185 @@ h2, h3, h4, h5{
         padding-left:5em;
         padding-right: 5em;
     }
+    /* Second box */
+    .centerDivSecondBox{
+        margin-top: 1vw;
+    }
+    .firstDivSecondBox{
+        margin-top: 8vw;
+    }
+    .secondtDivSecondBox{
+        margin-bottom: 8vw;
+    }
+    .descriptionTwoSecondBox{
+        margin-bottom: 2vw;
+        margin-top: 1vw;
+    }
     .blackBox{
-        margin-bottom: 25vw;
+        margin-bottom: 10vw;
     }
     @keyframes reveal{
     
         0% {
-            transform: translateY(40%)
+            transform: translateY(30%)
         }
         100%{
             transform: translateY(10%);
         }
+    }
+}
+/* ------------------------------------------------------------- SmartPhones <425px */
+
+@media screen and (max-width: 425px){
+
+    /* Header */
+
+    .textLogoFluo{
+        width: 30vw;
+        padding-top: 15px;
+    }
+    .desktopHeader{
+        height: 80px;
+    }
+    .logoSocialBox{
+        margin-left: -20px;
+    }
+    h1{
+        min-width: 0;
+    }
+    .logoRS:active, .logoRS:hover{ /* --------------Logo RS Zoom */
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: 0;
+        cursor: none;
+    }
+    .logoRS:active{ /* --------------Logo RS Zoom */
+        background-color: #f8982b;
+        transition: 0;
+        border-radius: 15%;
+    }
+    .logoYT{
+        scale:1.1;
+        margin-top: 4px;
+    }
+    .hamburger{
+        top:8px;
+        left:-6px
+    }
+   
+
+    /* parallax + zoom */
+
+    .logoFluo{
+        margin-right:0;
+        top:40%;
+        left:;
+        scale: 1.3 ;
+    }
+    .logoFluo:hover{ 
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        filter:none;
+        transition: 0s;
+    }
+    .logoFluo:active{ 
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        filter: drop-shadow(16px 16px 20px rgb(197, 151, 90)) blur(40px);
+        transition: 10s;
+    }
+
+
+     /* Main */
+    
+    .firstDivFirstBox{  
+        width: 25vw;
+        min-width: 350px;
+    }
+    .firstDivFirstBox p{
+        line-height: 1.7em;
+    }
+    .descriptionOne{
+        margin-top: 20px;
+    }
+    h3{
+        margin-top: 5px;
+    }
+    h2{
+        margin-bottom: 3px;
+    }
+    .secondtDivFirstBox{
+        line-height: 1.8em;
+        min-width: 300px;
+        padding-bottom: 1em;
+        }  
+    .firstDivSecondBox{
+        width: 25vw;
+        min-width: 350px;
+    }
+    .secondtDivSecondBox{
+        line-height: 1.8em;
+        width: 25vw;
+        min-width: 320px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .descriptionTwo{
+        margin-bottom: 30px;
+    }
+    .blackBox{
+        width: 90%;
+        margin-bottom: 15vw;
+    }
+    #secondBlackBox{
+        margin-bottom: 30vw;
+    }
+    .centerDivFirstBox{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+   
+    
+    /* Footer */
+    
+    .bottomFooter{
+        display: flex;
+        flex-wrap:wrap;
+        padding: 7vw;
+    }
+    #rightFooter{
+        margin-top: 1.2em;
+    }
+    .sideFooter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 15px;
+        padding-top: 20px;
+        font-size: 17px;
+        width: 200px;
+    }
+    .sideFooter a:hover{
+        cursor: none;
+        color:rgb(197, 151, 90);
+        transition: 0;
+    }
+    .sideFooter a:active{
+        cursor: none;
+        color:rgb(197, 151, 90);
+        transition: 1.5s;
+    }
+    .descriptionOneSecondBox{
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+    .descriptionTwoSecondBox{
+       margin-top: 30px;
+       margin-bottom: 25px;
     }
 }
 /* --------------------------------button */
