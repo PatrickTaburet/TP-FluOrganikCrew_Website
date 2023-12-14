@@ -46,8 +46,11 @@
     </header>
 
     <main>
+        <section>
+            <img class="logoFluoTopPage" src="/Images/LOGO_FLUORGANIK-BLANC.png" alt="logo_fluorganik_blanc">
+        </section>
         <section class="mainSection">
-            <div class="blackBox" >   <!-- First BlackBox -->
+            <div class="blackBox" id="blackBoxOne">   <!-- First BlackBox -->
                 <div class="firstBoxContent">
                     <div class="firstDivFirstBox">
                         <p class="titleBlackBox">Rentals services</p>
@@ -66,33 +69,6 @@
                             <a class="button" href="#popup1">Contact Us</a>
                         </div>
                         <img class="imagesBox" src="/Images/Services/son + tent.jpg" alt="liquid_Light_Show">
-    <!------------- pop up form ------------------->
-                        <div id="popup1" class="overlay">
-                            <div class="popup">
-                                <p>Rental Form</p>
-                                <a class="close" href="#">&times;</a>
-                                <div class="contentPopUp">
-                                    <form method="get" action="">
-                                        <p class="formRent">
-                                            <input type="text" name="firstName" id="firstName" size="20" placeholder="First Name" maxlength="20">
-                                            <input type="text" name="LastName" id="LastName" size="20" placeholder="Last Name" maxlength="20">
-                                            <input type="email" name="email" id="email"  placeholder="Email">  
-                                            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone"><br>
-                                            <label for="subject">Choose your subject :</label>
-                                            <select name="subject" id="subject">
-                                                <option value="stretchTent">Stretch-tent</option>
-                                                <option value="lightShow">Light Show</option>
-                                                <option value="events">Events</option>
-                                                <option value="other">Other</option>
-                                            </select>
-                                            <textarea name="comment" id="comment" cols="40" rows="7" placeholder="Your message here"></textarea><br>
-                                            <input type="submit"  value="Send the form" class="sendButton">
-                                        </p>
-                                    </form>
-                                    <img class="logoForm" src="/Images/LOGO_FLUORGANIK-NOIR.png" alt="logo_fluorganik_black">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -111,6 +87,35 @@
                             <a class="button" href="#popup1">Contact Us</a>
                         </div>
                         <img class="imagesBox" id="imageSetupSecondBox" src="/Images/Services/lightshow-setup.jpg" alt="liquid_Light_Show">
+                    </div>
+                </div>
+            </div>
+        </section>
+           <!------------- pop up form ------------------->
+        <section>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <p>Rental Form</p>
+                    <a class="close" href="#">&times;</a>
+                    <div class="contentPopUp">
+                        <form method="get" action="">
+                            <p class="formRent">
+                                <input type="text" name="firstName" id="firstName" size="20" placeholder="First Name" maxlength="20">
+                                <input type="text" name="LastName" id="LastName" size="20" placeholder="Last Name" maxlength="20">
+                                <input type="email" name="email" id="email"  placeholder="Email">  
+                                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone"><br>
+                                <label for="subject">Choose your subject :</label>
+                                <select name="subject" id="subject">
+                                    <option value="stretchTent">Stretch-tent</option>
+                                    <option value="lightShow">Light Show</option>
+                                    <option value="events">Events</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <textarea name="comment" id="comment" cols="40" rows="7" placeholder="Your message here"></textarea><br>
+                                <input type="submit"  value="Send the form" class="sendButton">
+                            </p>
+                        </form>
+                        <img class="logoForm" src="/Images/LOGO_FLUORGANIK-NOIR.png" alt="logo_fluorganik_black">
                     </div>
                 </div>
             </div>

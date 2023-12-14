@@ -17,6 +17,59 @@
     box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }
 
+/* ------------------------------Scroll Animation */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+
+    }
+}
+.firstDivFirstBox, .firstDivSecondBox{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 15% cover 30%;
+}
+
+
+
+#blackBoxOne{
+    animation: revealOne both linear;
+    animation-timeline: view();
+    animation-range: entry 40% cover 50%; 
+}
+#secondBlackBox{
+    animation: revealTwo both linear;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
+}
+
+@keyframes revealOne{
+    
+    0% {
+        transform: translateY(10%)
+    }
+    100%{
+        transform: translateY(-5%);
+    }
+}
+@keyframes revealTwo{
+    
+    0% {
+        transform: translateY(50%)
+    }
+    100%{
+        transform: translateY(-5%);
+    }
+}
+
+
+
+
 /*----------------------------------- Header */
 header{
 
@@ -226,6 +279,34 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/*----------------------- logo dissapear */
+.logoFluoTopPage{
+    width: 35%;
+    position: absolute;
+    z-index: 9;
+    right: 8%;
+    top: 10%;
+}
+.logoFluoTopPage{
+    animation: scale linear both;
+    animation-timeline: view(block 10% 30%);
+}
+@keyframes scale {
+    from {
+        scale: 2.2;
+
+    }
+    57%{
+        filter: blur(0);
+
+    }
+    to{
+        scale: 0;
+        filter: blur(20px);
+
+    }
+}
 /*----------------------------------------------- Section 1 */
 .mainSection{
     display: flex;
@@ -240,6 +321,7 @@ body{
     box-shadow: 0px 10px 20px 7px rgba(0,0,0,0.83);
     -webkit-box-shadow: 0px 10px 20px 7px rgba(0,0,0,0.83);
     -moz-box-shadow: 0px 10px 20px 7px rgba(0,0,0,0.83);
+    z-index: 11;
 }
 .titleBlackBox{
     font-size: 2em;
@@ -345,6 +427,7 @@ body{
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    z-index: 15;
 }
 .overlay:target {
   visibility: visible;
