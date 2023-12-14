@@ -8,8 +8,6 @@
     padding : 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Oswald','Open Sans', sans-serif;
-    font-family: pop;
     font-family: 'ZenDots-Regular';
     font-weight: 300;
 }
@@ -664,12 +662,15 @@ h2, h3, h4, h5{
     }
    
     .firstDivSecondBox, .secondtDivSecondBox{
-        margin-top: 5vw;
+        margin-top: 2vw;
         padding-bottom: 0;
         min-width: 15em;
         width: 100%;
-        margin-bottom: 8vw;
+        margin-bottom: 3vw;
         padding-top: 0;
+    }
+    .firstDivSecondBox{
+        padding-top: 2vw;
     }
     .secondtDivSecondBox{
         margin-bottom: 7vw;

@@ -8,8 +8,6 @@
     padding : 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Oswald','Open Sans', sans-serif;
-    font-family: pop;
     font-family: 'ZenDots-Regular';
     font-weight: 300;
 }
@@ -302,7 +300,7 @@ body{
     font-size: 2em;
     margin-top: 2em;
     color: white;
-    width: 40%;
+    width: 100%;
     text-align: center;
 }
 

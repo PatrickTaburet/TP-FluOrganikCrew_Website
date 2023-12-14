@@ -8,8 +8,6 @@
     padding : 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Oswald','Open Sans', sans-serif;
-    font-family: pop;
     font-family: 'ZenDots-Regular';
     font-weight: 300;
 }
@@ -488,7 +486,27 @@ input, textarea, select{
   .popup{
     width: 70%;
   }
+  .logoForm{
+    display: none;
+  }
 }
+@media screen and (max-width: 425px){
+    .box{
+      width: 90%;
+    }
+    .popup{
+      width: 90%;
+    }
+    .logoForm{
+      display: none;
+    }
+    .sendButton{
+        width: 140px;
+    }
+    .formRent{
+        font-size: 13px;
+    }
+  }
 
 
 /* -----------------------------------Footer */
