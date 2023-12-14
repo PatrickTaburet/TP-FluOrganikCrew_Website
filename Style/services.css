@@ -42,7 +42,7 @@
     animation-timeline: view();
     animation-range: entry 40% cover 50%; 
 }
-#secondBlackBox{
+#blackBoxTwo{
     animation: revealTwo both linear;
     animation-timeline: view();
     animation-range: entry 30% cover 40%;
@@ -72,7 +72,8 @@
 
 /*----------------------------------- Header */
 header{
-
+    position: relative;
+    z-index: 20;
 }
 .desktopHeader{
     position: fixed;
@@ -269,7 +270,7 @@ li{
 }
 
 
-/* -------------------------------Main */
+/* -----------------------------------------------Main */
 
 
 body{
@@ -290,18 +291,18 @@ body{
 }
 .logoFluoTopPage{
     animation: scale linear both;
-    animation-timeline: view(block 10% 30%);
+    animation-timeline: view(block 20% 70%);
 }
 @keyframes scale {
     from {
-        scale: 2.2;
+        scale: 1.9;
 
     }
-    57%{
+    50%{
         filter: blur(0);
 
     }
-    to{
+    80%{
         scale: 0;
         filter: blur(20px);
 
@@ -539,14 +540,14 @@ input, textarea, select{
     padding-top: 15px;
     padding-top: 20px;
     font-size: 17px;
-    width: 40%;
+    width: 33%;
 }
 .sideFooter p{
     margin: 0 0 25px 0;
 }
 .sideFooter a{
     color: rgb(253, 233, 207);
-    
+    width: 70%;
 }
 .sideFooter a:hover{
     cursor: pointer;
@@ -558,15 +559,392 @@ input, textarea, select{
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-    width: 50vw;
+    width: 33%;
     font-size: 12px;
 }
 #rightFooter{
-  
+    width: 33%;
+    padding-right: 50px;
     text-align: center;
-
 }
 .textRightFooter {
     font-weight: 1200;
     font-size: 20px;
 }
+
+/* ----------------------------MEDIA QUERY-------------------------------*/
+
+/* -------------------------Tablet <800px */
+
+@media screen and (max-width: 800px){
+
+    /* header */
+    header{
+        position: relative;
+        z-index: 20;
+    }
+    .blackBox{
+        margin: 3vw;
+    }
+    .menuBuger{     
+        display: block;
+    }
+    .menuDesktopNav{
+        display: none;
+    }
+
+    main{
+        margin-bottom: 3em;
+    }
+
+/*----------------------- logo dissapear */
+    .logoFluoTopPage{
+        width: 35%;
+        position: absolute;
+        z-index: 9;
+        right: 8%;
+        top: 25%;
+    }
+    .logoFluoTopPage{
+        animation: scale linear both;
+        animation-timeline: view(block 10% 70%);
+    }
+    @keyframes scale {
+        from {
+            scale: 2.2;
+
+        }
+        37%{
+            filter: blur(0);
+
+        }
+        to{
+            scale: 0;
+            filter: blur(10px);
+
+        }
+    }
+   
+
+    /* -------Main */
+
+    .titleBlackBox{
+        text-align: center;
+        width: 80%;
+        margin-top: 0.5em;
+    }
+    .descriptionBox{
+        width: 80%;
+    }
+    .subtitleBlackBox{
+        margin-top: 0.5em;
+    }
+    .blackBox{
+        margin-top: 17em;
+    }
+    #blackBoxOne{
+        height: 100%;
+    }
+    /* button */
+
+    .boxButton {
+        width: 70%;
+        margin: 0 auto;
+        background: rgba(252, 162, 17, 0.2);
+        padding: 35px;
+        border: 2px solid #fff;
+        border-radius: 20px/50px;
+        background-clip: padding-box;
+        text-align: center;
+        margin: 10px;
+        margin-top: 22px;
+    }
+    .button {
+        font-size: 1em;
+        padding: 10px;
+        color: #fff;
+        background-color: rgba(252, 162, 17, 0.2);
+        border: 2px solid #f8982b;
+        border-radius: 20px/50px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+    }
+
+     /* Footer */
+    .globalFooter{
+        padding-top: 5%;
+    }
+     .bottomFooter{
+        display: flex;
+        flex-wrap:wrap;
+        padding: 2em;
+    }
+    #rightFooter{
+        margin-top: 1.2em;
+        padding-right: 0;
+        margin-bottom: 5%;
+    }
+    .sideFooter a {
+        width: 150%;
+    }
+    .centerFooter {
+        margin-left: 5em;
+        margin-right: 5em;
+        margin-bottom: 20px;
+        width: 50vw;
+        font-size: 12px;
+    }
+}
+
+/* ------------------------------------------------------------- SmartPhones <425px */
+
+@media screen and (max-width: 425px){
+
+    /* Header */
+
+    .textLogoFluo{
+        width: 30vw;
+        padding-top: 15px;
+    }
+    .desktopHeader{
+        height: 80px;
+    }
+    .logoSocialBox{
+        margin-left: -20px;
+    }
+    h1{
+        min-width: 0;
+    }
+    .logoRS:active, .logoRS:hover{ /* --------------Logo RS Zoom */
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: 0;
+        cursor: none;
+    }
+    .logoRS:active{ /* --------------Logo RS Zoom */
+        background-color: #f8982b;
+        transition: 0;
+        border-radius: 15%;
+    }
+    .logoYT{
+        scale:1.1;
+        margin-top: 4px;
+    }
+    .hamburger{
+        top:8px;
+        left:-6px
+    }
+
+
+
+
+    
+    /*----------------------- logo dissapear */
+    .logoFluoTopPage{
+        width: 80%;
+        position: absolute;
+        z-index: 9;
+        left: 11%;
+        top: 23%;
+    }
+    .logoFluoTopPage{
+        animation: scale linear both;
+        animation-timeline: view(block -10% 80%);
+    }
+    @keyframes scale {
+        from {
+            scale: 1.2;
+
+        }
+        10%{
+            filter: blur(0);
+
+        }
+        50%{
+            scale: 0;
+            filter: blur(10px);
+
+        }
+    }
+    /* ------------------------------Scroll Animation */
+
+    @keyframes fade {
+        from {
+            opacity: 0; 
+
+        }
+        to{
+            opacity: 1; 
+
+        }
+    }
+
+    .firstDivFirstBox, .firstDivSecondBox{
+        animation: fade linear both;
+        animation-timeline: view();
+        animation-range: entry 60% cover 37%;
+    }   
+
+
+    
+    @keyframes reveal{
+    
+        0% {
+            transform: translateY(30%)
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
+    #blackBoxOne, #blackBoxTwo{
+        animation: reveal both linear;
+        animation-timeline: view();
+        animation-range: entry 30% cover 70%;
+    }
+
+     /* -----------Main */
+     .mainSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+     .blackBox{
+        width: 90%;
+        margin-bottom: -30em;
+    }
+    .descriptionBox{
+        width: 80%;
+        text-align: center;
+        font-size: 15px;
+    }
+    .imagesBox{
+        width: 85%;
+    }
+     /* First Box */
+
+     .firstDivFirstBox{  
+        min-width: 10em;
+        width: 100%;
+        padding-bottom: 10%;
+    }
+    .firstDivFirstBox img{
+        min-width: 10em;
+    }
+    .firstDivFirstBox p{
+        line-height: 1.7em;
+    }
+    .secondtDivFirstBox img{
+        min-width: 10em;
+        width: 100%;
+    }
+
+
+    .centerDivFirstBox{
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 90%;
+    }
+    .centerDivFirstBox img{
+        min-width: 100%;
+    }
+    h3{
+        margin-top: 5px;
+    }
+    h2{
+        margin-bottom: 3px;
+    }
+    .secondtDivFirstBox{
+        line-height: 1.8em;
+        min-width: 300px;
+        padding-bottom: 1em;
+        }  
+
+    /* Second Box */
+
+    .firstDivSecondBox{
+        width: 25vw;
+        min-width: 350px;
+        margin-bottom: 0.8em;
+    }
+    .secondtDivSecondBox{
+        line-height: 1.8em;
+        width: 90%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .secondtDivSecondBox img{
+        min-width: 10em;
+        width: 90%;
+    }
+    .descriptionOneSecondBox{
+        padding-top: 2em;
+       
+    }
+    .descriptionTwoSecondBox{
+        padding-bottom: 2em;
+    }
+   
+    #blackBoxTwo{
+        margin-bottom: 30vw;
+    }
+    .centerDivSecondBox{
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 80%;
+    }
+    .centerDivSecondBox img{
+        min-width: 100%;
+    }
+    #imageSetupSecondBox{
+        width: 85%;
+    }
+    
+    /* Footer */
+    .globalFooter{
+        padding-top: 10%;
+    }
+    .bottomFooter{
+        display: flex;
+        flex-wrap:wrap;
+        padding: 7vw;
+    }
+ 
+    .sideFooter{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 15px;
+        padding-top: 20px;
+        font-size: 17px;
+        width: 50%;
+    }
+    .sideFooter a:hover{
+        cursor: none;
+        color:rgb(197, 151, 90);
+        transition: 0;
+    }
+    .sideFooter a:active{
+        cursor: none;
+        color:rgb(197, 151, 90);
+        transition: 1.5s;
+    }
+    #rightFooter{
+        margin-top: 1.2em;
+        padding-right: 0;
+        width: 70%;
+        margin-bottom: 10%;
+    }
+    .sideFooter a {
+        width: 150%;
+    }
+    .centerFooter{
+        text-align: center;
+    }
+}
+
