@@ -42,7 +42,7 @@
     animation-timeline: view();
     animation-range: entry 40% cover 50%; 
 }
-#secondBlackBox{
+#blackBoxTwo{
     animation: revealTwo both linear;
     animation-timeline: view();
     animation-range: entry 30% cover 30%;
@@ -69,9 +69,7 @@
 
 
 /*----------------------------------- Header */
-header{
 
-}
 .desktopHeader{
     position: fixed;
     background-color: black;
@@ -361,7 +359,7 @@ body{
     margin-top: 1em;
     line-height: 1.5em;
 }
-#secondBlackBox{
+#blackBoxTwo{
     margin-bottom: 8%;
     margin-top: 30vw;
 }
@@ -447,3 +445,331 @@ body{
     font-weight: 1200;
     font-size: 20px;
 }
+
+/* ---------------------------------------------------MEDIA QUERY-----------------------------------------------------*/
+
+/* -------------------------Tablet <800px */
+
+@media screen and (max-width: 800px){
+
+    /* header */
+    header{
+        position: relative;
+        z-index: 20;
+    }
+    .blackBox{
+        margin: 3vw;
+    }
+    .menuBuger{     
+        display: block;
+    }
+    .menuDesktopNav{
+        display: none;
+    }
+    
+
+    /* ------------------------------Scroll Animation */
+    #blackBoxTwo{
+        margin-bottom: 8%;
+        margin-top: 0;
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: 0;
+
+        }
+        to{
+            opacity: 1;
+
+        }
+    }
+    .firstDivFirstBox, .firstDivSecondBox{
+        animation: fade linear both;
+        animation-timeline: view();
+        animation-range: entry 15% cover 30%;
+    }
+    
+    #blackBoxOne{
+        animation: revealOne both linear;
+        animation-timeline: view();
+        animation-range: entry 40% cover 50%; 
+    }
+    #blackBoxTwo{
+        animation: revealTwo both linear;
+        animation-timeline: view();
+        animation-range: entry 30% cover 50%;
+    }
+    
+    @keyframes revealOne{
+        
+        0% {
+            transform: translateY(40%)
+        }
+        100%{
+            transform: translateY(-10%);
+        }
+    }
+    @keyframes revealTwo{
+        
+        0% {
+            transform: translateY(20%)
+        }
+        100%{
+            transform: translateY(55%);
+        }
+    }
+     /* -------Main */
+
+ 
+    .descriptionOne, .descriptionOneSecondBox{
+        width: 80%;
+    }
+    
+
+     /* Footer */
+     .globalFooter{
+        padding-top: 5%;
+    }
+     .bottomFooter{
+        display: flex;
+        flex-wrap:wrap;
+        padding: 2em;
+    }
+    #rightFooter{
+        margin-top: 1.2em;
+        padding-right: 0;
+        margin-bottom: 5%;
+    }
+    .sideFooter a {
+        width: 150%;
+    }
+    .centerFooter {
+        margin-left: 5em;
+        margin-right: 5em;
+        margin-bottom: 20px;
+        width: 50vw;
+        font-size: 12px;
+    }
+}
+
+/* ------------------------------------------------------------- SmartPhones <425px */
+
+@media screen and (max-width: 425px){
+
+    /* Header */
+
+    .textLogoFluo{
+        width: 30vw;
+        padding-top: 15px;
+    }
+    .desktopHeader{
+        height: 80px;
+    }
+    .logoSocialBox{
+        margin-left: -20px;
+    }
+    h1{
+        min-width: 0;
+    }
+    .logoRS:active, .logoRS:hover{ /* --------------Logo RS Zoom */
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: 0;
+        cursor: none;
+    }
+    .logoRS:active{ /* --------------Logo RS Zoom */
+        background-color: #f8982b;
+        transition: 0;
+        border-radius: 15%;
+    }
+    .logoYT{
+        scale:1.1;
+        margin-top: 4px;
+    }
+    .hamburger{
+        top:8px;
+        left:-6px
+    }
+
+    /* ------------------------------Scroll Animation */
+
+    @keyframes fade {
+        from {
+            opacity: 0; 
+
+        }
+        to{
+            opacity: 1; 
+
+        }
+    }
+
+    .firstDivFirstBox, .firstDivSecondBox{
+        animation: fade linear both;
+        animation-timeline: view();
+        animation-range: entry 60% cover 37%;
+    }   
+
+
+    
+    @keyframes reveal{
+    
+        0% {
+            transform: translateY(30%)
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
+    #blackBoxOne, #blackBoxTwo{
+        animation: reveal both linear;
+        animation-timeline: view();
+        animation-range: entry 30% cover 70%;
+    }
+
+    /* -----------Main */
+    .mainSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+     .blackBox{
+        width: 90%;
+        margin-bottom: -4em;
+    }
+    .descriptionBox{
+        width: 80%;
+        text-align: center;
+        font-size: 15px;
+    }
+    .imagesBox{
+        width: 85%;
+    }
+     /* First Box */
+
+     .firstDivFirstBox{  
+        min-width: 10em;
+        width: 100%;
+        padding-bottom: 10%;
+    }
+    .firstDivFirstBox img{
+        min-width: 10em;
+    }
+    .firstDivFirstBox p{
+        line-height: 1.7em;
+    }
+    .secondtDivFirstBox img{
+        min-width: 10em;
+        width: 100%;
+    }
+
+
+    .centerDivFirstBox{
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 90%;
+    }
+    .centerDivFirstBox img{
+        min-width: 100%;
+    }
+    h3{
+        margin-top: 5px;
+    }
+    h2{
+        margin-bottom: 3px;
+    }
+    .secondtDivFirstBox{
+        line-height: 1.8em;
+        min-width: 300px;
+        padding-bottom: 1em;
+        }  
+
+    /* Second Box */
+
+    .firstDivSecondBox{
+        width: 25vw;
+        min-width: 350px;
+        margin-bottom: 0.8em;
+    }
+    .secondtDivSecondBox{
+        line-height: 1.8em;
+        width: 90%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .secondtDivSecondBox img{
+        min-width: 10em;
+        width: 90%;
+    }
+    .descriptionOneSecondBox{
+        padding-top: 2em;
+       
+    }
+    .descriptionTwoSecondBox{
+        padding-bottom: 2em;
+    }
+   
+    #blackBoxTwo{
+        margin-bottom: 30vw;
+    }
+    .centerDivSecondBox{
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 80%;
+    }
+    .centerDivSecondBox img{
+        min-width: 100%;
+    }
+    #imageSetupSecondBox{
+        width: 85%;
+    }
+    
+    /* Footer */
+    .globalFooter{
+        padding-top: 10%;
+    }
+    .bottomFooter{
+        display: flex;
+        flex-wrap:wrap;
+        padding: 7vw;
+    }
+ 
+    .sideFooter{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 15px;
+        padding-top: 20px;
+        font-size: 17px;
+        width: 50%;
+    }
+    .sideFooter a:hover{
+        cursor: none;
+        color:rgb(197, 151, 90);
+        transition: 0;
+    }
+    .sideFooter a:active{
+        cursor: none;
+        color:rgb(197, 151, 90);
+        transition: 1.5s;
+    }
+    #rightFooter{
+        margin-top: 1.2em;
+        padding-right: 0;
+        width: 70%;
+        margin-bottom: 10%;
+    }
+    .sideFooter a {
+        width: 150%;
+    }
+    .centerFooter{
+        text-align: center;
+    }
+}
+
